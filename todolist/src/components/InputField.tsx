@@ -19,6 +19,7 @@ const InputField = ({ todo, setTodo, handleAdd }: Props) => {
       className="input"
       onSubmit={(e) => {
         handleAdd(e);
+        inputRef.current?.blur();
       }}
     >
       <input
@@ -26,7 +27,9 @@ const InputField = ({ todo, setTodo, handleAdd }: Props) => {
         type="input"
         placeholder="wrtie your task"
         value={todo}
-        onChange={inputValue}
+        onChange={(e) => {
+          inputValue(e);
+        }}
       />
       <button type="submit">Go</button>
     </form>
