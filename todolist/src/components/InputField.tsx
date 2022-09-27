@@ -27,6 +27,7 @@ const InputField: React.FC<Props> = ({
       }}
     >
       <input
+        className="mainInput"
         ref={inputRef}
         type="input"
         placeholder="wrtie your task"
