@@ -10,7 +10,7 @@ interface Props {
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const SingleTodo = () => {
+const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }: Props) => {
   return (
     <div className="singleTodo">
       <div className="singleTodoData"></div>
