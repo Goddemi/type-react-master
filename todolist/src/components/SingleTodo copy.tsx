@@ -2,7 +2,7 @@ import React from "react";
 import { Todo } from "../types/todo";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
-import "./style.cssa";
+import "./style.css";
 
 interface Props {
   todo: Todo;
@@ -10,10 +10,10 @@ interface Props {
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const SingleTodo = () => {
+const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }: Props) => {
   return (
     <div className="singleTodo">
-      <div className="singleTodoData"></div>
+      <div className="singleTodoData">{todo.todo}</div>
       <div className="icons">
         <span className="icon">
           <AiFillEdit />
