@@ -19,7 +19,7 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }: Props) => {
     inputRef.current?.focus();
   }, [edit]);
 
-  const handleEdit = (clickedId: number) => {
+  const handleEdit = () => {
     setEdit(!edit);
   };
 
@@ -76,7 +76,7 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }: Props) => {
         <span
           className="icon"
           onClick={() => {
-            handleEdit(todo.id);
+            handleEdit();
           }}
         >
           <AiFillEdit />
