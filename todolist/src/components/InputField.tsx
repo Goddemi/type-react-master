@@ -36,7 +36,7 @@ const InputField: React.FC<Props> = ({
         }}
         value={todo}
       />
-      <button type="submit">Go</button>
+      <button type="submit">test</button>
     </form>
   );
 };
